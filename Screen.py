@@ -121,6 +121,8 @@ class Screen():
         moveTo(self.bison_upgrades.x, self.bison_upgrades.y)
         click(button="left")
         sleep(0.5)
+
+        #loops through upgrades
         for y in self.pinata_cards_rows:
             for x in self.pinata_cards_columns:
                 moveTo(x,y)
@@ -130,8 +132,8 @@ class Screen():
                 click(button="left")
                 sleep(0.5)
 
-        # #Bummy Bear upgrades
-        moveTo(self.gummy_upgrades.x, self.gummy_upgrades.y)
+        # #Gummy Bear upgrades
+        moveTo(self.gummy_upgrades.x, self.gummy_upgrades.y) #Move to the gummy bear card and clicks
         click(button="left")
         sleep(0.5)
 
@@ -144,10 +146,12 @@ class Screen():
             sleep(0.5)
 
         #Boss upgrades
-        moveTo(self.boss_upgrades.x, self.boss_upgrades.y)
+        moveTo(self.boss_upgrades.x, self.boss_upgrades.y) #moves to boss card and clicks
         click(button="left")
         sleep(0.5)
 
+        #Only purchase upgrade for gumball
+        #TODO
         for i in range(2):
             moveTo(self.pinata_cards_columns[i], self.pinata_cards_rows[0])
             click(button="left")
